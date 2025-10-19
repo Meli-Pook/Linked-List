@@ -40,7 +40,7 @@ string LLStack::top()
 */
 int LLStack::size()
 {
-	return -1;
+	return count;
 }
 
 /*
@@ -53,6 +53,16 @@ int LLStack::size()
 */
 void LLStack::push(string s)
 {
+	Node* newNode = new Node(s);
+
+	if (head == nullptr) { 
+		head = newNode;
+		tail = newNode;
+	} else { 
+		newNode->next = head;
+		head = newNode;
+	}
+	count++;
 
 }
 
