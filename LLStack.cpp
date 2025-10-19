@@ -16,6 +16,9 @@ Node::Node(string s)
 	// the head and tail should both be initialized as null pointers
 LLStack::LLStack()
 {
+	head = nullptr;
+	tail = nullptr;
+	count = 0;
 
 }
 
@@ -26,7 +29,10 @@ LLStack::LLStack()
 */
 string LLStack::top()
 {
-	return "fixthis";
+	if(head == nullptr) {
+		return "";
+	}
+	return head->data;
 }
 
 /*
