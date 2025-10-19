@@ -6,6 +6,8 @@
 	// so be sure that the "next" Node is linked to a nullptr
 Node::Node(string s) 
 {
+	data = s;
+	next = nullptr;
 
 }
 
