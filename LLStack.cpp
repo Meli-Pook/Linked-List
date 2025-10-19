@@ -75,5 +75,19 @@ void LLStack::push(string s)
 */
 void LLStack::pop()
 {
+	if(head == nullptr) {
+		return;
+	}
 
+	Node* temp = head;
+	if (head == tail) { 
+		head = tail = nullptr;
+		
+	}
+	else{
+		head = head->next;
+	}
+
+	delete temp;
+	count--;
 }
